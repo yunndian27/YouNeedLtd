@@ -1,0 +1,43 @@
+$color_primary: #C02A2C
+$color_secondary: #1E3BA4
+$color_grey_33: #333
+$color_grey_66: #666
+$color_grey_cc: #ccc
+$color_grey_fa: #fafafa
+$color_func: #067FEE
+$color_white: #fff
+$color_black: #000
+$color_func2: #720708
+
+
+//共用設定
+body 
+  font-family: 'Rubik','Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  letter-spacing: 0.25px
+  overflow-x: hidden
+  font-size: 16px
+
+
+.container
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 20px
+  @include b1200
+    padding: 0
+
+ul 
+  padding: 0
+  margin: 0
+  li
+    list-style: none
+
+a
+  text-decoration: none
+  transition: all 0.3s ease-in-out
+
+main 
+  @include b992 
+    position: relative
+    margin-top: 60px
+  h2
+    text-align: center

@@ -1,13 +1,12 @@
-$color_primary: #C02A2C
-$color_secondary: #1E3BA4
+$color_primary: #e97d12
+$color_secondary: #0B43AF
 $color_grey_33: #333
 $color_grey_66: #666
 $color_grey_cc: #ccc
 $color_grey_fa: #fafafa
-$color_func: #067FEE
+$color_func: #723510
 $color_white: #fff
 $color_black: #000
-$color_func2: #720708
 
 
 //共用設定
@@ -40,4 +39,32 @@ main
     position: relative
     margin-top: 60px
   h2
+    font-size: 36px
+    display: flex
+    justify-content: center
+    align-content: center
+    position: relative
+    &::after, &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 30%
+      width: 150px
+      height: 3px
+      background: $color_primary
+    &::before
+      left: auto
+      right: 30%
+  h3, h4, h5
     text-align: center
+  h3
+    font-size: 24px
+  h4
+    color: $color_primary
+    font-size: 20px
+    font-weight: 400
+  h5
+    font-size: 20px
+    color: $color_func
+  section
+    padding: 60px 0

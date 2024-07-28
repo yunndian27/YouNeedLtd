@@ -1,0 +1,45 @@
+.section_product
+  .product_group
+    border: 2px solid $color_primary
+    border-radius: 24px
+    margin: 10px
+    padding: 40px
+    min-height: 520px
+  .product_item
+    margin-bottom: 24px
+    padding-left: 30px
+    position: relative
+    &:last-child
+      margin-bottom: 0
+    a
+      color: $color_func
+      cursor: pointer
+      &::before
+        content: ''
+        width: 20px
+        height: 20px
+        position: absolute
+        top: 0
+        left: 0
+        background-image: url('../images/icons/icon_radix.svg')
+        background-repeat: no-repeat
+        background-size: cover
+        filter: invert(22%) sepia(12%) saturate(6138%) hue-rotate(354deg) brightness(94%) contrast(91%)
+      &.noIcon::before
+        background-image: none
+      &:hover
+        color: $color_primary
+        &::before
+          filter: invert(46%) sepia(59%) saturate(750%) hue-rotate(351deg) brightness(105%) contrast(96%)
+        &.noHover
+          color: $color_func
+          cursor: not-allowed
+          &::before
+            filter: invert(22%) sepia(12%) saturate(6138%) hue-rotate(354deg) brightness(94%) contrast(91%)
+    img
+      padding-right: 12px
+      filter: invert(22%) sepia(12%) saturate(6138%) hue-rotate(354deg) brightness(94%) contrast(91%)
+  h3
+    margin-bottom: 40px
+  h4
+    margin-bottom: 30px

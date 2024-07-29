@@ -1,25 +1,33 @@
 header
-  background: $color_grey_66 url("../images/header/header_bg.jpg") 80% center / cover
-  height: 48vh
-  min-height: 480px
+  background: $color_grey_66 url("../images/header/header_bg.jpg") 100% center / cover no-repeat
+  min-height: 300px
   margin-top: 40px
+  display: flex
+  justify-content: center
+  align-items: center
   position: relative
+  @include b992
+    min-height: 480px
   &::after
     content: ''
     position: absolute
-    bottom: -60px
+    bottom: -10px
     left: 0
     width: 100%
-    height: 13vh
-    background: url("/images/header/header_dec.png") no-repeat
-    background-size: contain
+    height: 50%
+    max-height: 130px
+    background: url("/images/header/header_dec.png") 80% bottom / contain no-repeat
+    @include b992
+      height: 130px
+
   h1
     color: $color_white
     letter-spacing: 5px
     text-align: center
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%,-50%)
+    // position: absolute
+    // top: 50%
+    // left: 50%
+    // transform: translate(-50%,-50%)
+    width: 100%
     span
       font-weight: 100

@@ -34,6 +34,21 @@ a
   text-decoration: none
   transition: all 0.3s ease-in-out
 
+img
+  width: 100%
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link
+  color: $color_primary
+
+.nav-contact
+  color: $color_primary !important
+  font-weight: 500
+  letter-spacing: 2px
+  border: 1px solid $color_primary
+  &:hover
+    color: $color_white !important
+    background: $color_primary !important
+
 main 
   @include b992 
     position: relative
@@ -48,13 +63,32 @@ main
       content: ''
       position: absolute
       top: 50%
-      left: 30%
-      width: 150px
+      left: 0%
+      width: 80px
       height: 3px
       background: $color_primary
+      z-index: -1
+      @include b576
+        left: 18%
+      @include b768
+        width: 100px
+        left: 25%
+      @include b992
+        width: 130px
+        left: 27%
+      @include b1200
+        left: 30%
     &::before
       left: auto
-      right: 30%
+      right: 0%
+      @include b576
+        right: 18%
+      @include b768
+        right: 25%
+      @include b992
+        right: 27%
+      @include b1200
+        right: 30%
   h3, h4, h5
     text-align: center
   h3
@@ -67,4 +101,6 @@ main
     font-size: 20px
     color: $color_func
   section
-    padding: 60px 0
+    padding: 80px 0
+    @include b992
+      padding: 60px 0

@@ -1,6 +1,10 @@
 footer
   .brand_logo
-    width: calc( 100% / 3 )
+    width: 80%
+    @include b576
+      width: 50%
+    @include b992
+      width: 100%
   .footer_info
     padding: 40px 0
     background-color: rgba($color_primary , .2)

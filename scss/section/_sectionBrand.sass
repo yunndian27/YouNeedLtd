@@ -1,7 +1,9 @@
 .section_brand
   h3
     font-size: 24px
-    text-align: left
+    text-align: center
+    @include b768
+      text-align: left
   p
     color: $color_grey_33
   .brand_article
@@ -12,3 +14,8 @@
   .pic_brand
     display: flex
     justify-content: center
+    min-width: 280px
+    width: 50%
+    margin: 0 auto
+    @include b992
+      width: 100%

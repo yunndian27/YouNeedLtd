@@ -1,7 +1,5 @@
 $(function($) {
   var swiper = new Swiper(".partner01Swiper, .partner02Swiper", {
-    // slidesPerView: 4,
-    // spaceBetween: 30,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
@@ -37,4 +35,8 @@ $(function($) {
       clickable: true,
     },
   });
+  var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '#navbar-scrollspy'
+  });
+  AOS.init();
 })
